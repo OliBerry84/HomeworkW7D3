@@ -1,12 +1,12 @@
-public class Vehicle {
+public abstract class Vehicle {
     int averageSpeed;
 
-    public Vehicle(int averagespeed){
+    public Vehicle(int averageSpeed){
         this.averageSpeed = averageSpeed;
     }
 
     public int getAverageSpeed() {
-        return averageSpeed;
+        return this.averageSpeed;
     }
 
     public int driveDistance(int distance) {
