@@ -8,11 +8,13 @@ public class DriverTest {
     Driver driver;
     DodgemCar dodgemCar;
     QuadBike quadBike;
+    Unicycle unicycle;
 
     @Before
     public void before(){
         dodgemCar = new DodgemCar(5, 2);
         quadBike = new QuadBike(50,1);
+        unicycle = new Unicycle(1,1);
         driver = new Driver("Ricky Bobby", dodgemCar);
     }
 
@@ -30,5 +32,7 @@ public class DriverTest {
     public void canSetVehicle(){
         driver.setVehicle(quadBike);
         assertEquals(1, driver.driveDistance(50));
+        driver.setVehicle(unicycle);
+        assertEquals(50,driver.driveDistance(50));
     }
 }
